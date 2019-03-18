@@ -1,16 +1,21 @@
 # SIMD Helper
 
 Print functions for `__m128` and `__m256`
+```c++
+simd_helper::Cout128M<T>(m1) // Visualize m1 (__m128) as a set of Ts
+simd_helper::Cout256M<T>(m2) // Visualize m2 (__m256) as a set of Ts
+```
 
 ## How to use
 - Put `simd_hepler.h` and `simd_helper.cpp` in your working directory
-- Compile them with `-march=native`
+- Include `simd_helper.h` in your codes
+- Compile the files with `-march=native`
 
 ## Test
 - `$ make && ./main`
 
 
-## Usage
+## Example
 
 ```c++
 #include <iostream>
@@ -76,8 +81,8 @@ int main(){
 
 
     // ==== Back to the memory ====
-    __attribute__((aligned(16))) float ret1[4];;
-    __attribute__((aligned(16))) float ret2[4];;
+    __attribute__((aligned(16))) float ret1[4];
+    __attribute__((aligned(16))) float ret2[4];
     _mm_store_ps(ret1, m4);
     _mm_store_ps(ret2, m5);
 

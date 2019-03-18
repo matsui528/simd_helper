@@ -61,8 +61,8 @@ int main(){
 
 
     // ==== Back to the memory ====
-    __attribute__((aligned(16))) float ret1[4];;
-    __attribute__((aligned(16))) float ret2[4];;
+    __attribute__((aligned(16))) float ret1[4];
+    __attribute__((aligned(16))) float ret2[4];
     _mm_store_ps(ret1, m4);
     _mm_store_ps(ret2, m5);
 
