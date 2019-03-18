@@ -32,11 +32,11 @@ int main(){
     __m128i m2 = _mm_set_epi32(0, 1, 2, 255);
     simd_helper::CoutM128<int>( (__m128) m2);  // [255, 2, 1, 0]
 
-    // Condier m2 is a set of eight chars.
+    // Condier m2 is a set of eight unsigned chars.
     // [255, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
     simd_helper::CoutM128<unsigned char>( (__m128) m2);
 
-    // Condier m2 is a set of eight unsigned chars.
+    // Condier m2 is a set of eight chars.
     // [-1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
     simd_helper::CoutM128<char>( (__m128) m2);
 
